@@ -1,0 +1,69 @@
+/* Basisstijl */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Status sectie */
+#status {
+    margin: 20px 0;
+    width: 90%;
+    max-width: 600px;
+}
+
+.status-bar {
+    background: #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tamagotchi afbeelding */
+#tamagotchi {
+    margin: 20px;
+    text-align: center;
+}
+
+#tamagotchi img {
+    max-width: 200px;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+/* Knoppen */
+#controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
