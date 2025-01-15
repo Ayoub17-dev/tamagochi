@@ -1,31 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamagotchi Interface</title>
+    <title>Luffy's Tamagotchi</title>
     <link rel="stylesheet" href="tama.css">
 </head>
+
 <body>
-    <header>
-        <h1>My Tamagotchi</h1>
-    </header>
-    <main>
-        <section id="status">
-            <div class="status-bar">Health: <span>100%</span></div>
-            <div class="status-bar">Happiness: <span>80%</span></div>
-        </section>
-        <section id="tamagotchi">
-            <img src="tamagotchi.png" alt="Tamagotchi" id="tamagotchi-image">
-        </section>
-        <section id="controls">
-            <button id="feed-btn">Feed</button>
-            <button id="play-btn">Play</button>
-            <button id="sleep-btn">Sleep</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Tamagotchi Game</p>
-    </footer>
+    <!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="One Piece - Opening 6 【Brand New World】 4K 60FPS Creditless  CC.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="game-container">
+        <!-- Game Content -->
+        <div id="game">
+            <h1>Luffy's Tamagotchi</h1>
+            <div class="tamagotchi">
+                <img src="R.png" alt="Luffy" class="character">
+
+                <!-- Interactive Message -->
+                <div id="tamagotchi-message" class="message">
+                    <p>I'm feeling great! Let's go on an adventure!</p>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="stat">
+                    <p>Health: <span id="health-percent">100%</span></p>
+                    <progress id="health-bar" value="100" max="100"></progress>
+                </div>
+                <div class="stat">
+                    <p>Hunger: <span id="hunger-percent">100%</span></p>
+                    <progress id="hunger-bar" value="100" max="100"></progress>
+                </div>
+                <div class="stat">
+                    <p>Energy: <span id="energy-percent">100%</span></p>
+                    <progress id="energy-bar" value="100" max="100"></progress>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button onclick="feed()">🍗 Feed Luffy</button>
+                <button onclick="sleep()">💤 Let Luffy Sleep</button>
+                <button onclick="train()">💪 Train Luffy</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="hidden">
+            <h2>Game Over</h2>
+            <p>Your Tamagotchi has died. Better luck next time!</p>
+            <button onclick="resetGame()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="tama.js"></script>
 </body>
+
 </html>
