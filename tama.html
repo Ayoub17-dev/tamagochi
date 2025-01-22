@@ -2,63 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luffy's Tamagotchi</title>
-    <link rel="stylesheet" href="tama.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luffy's Tamagotchi</title>
+  <link rel="stylesheet" href="tama.css">
 </head>
 
 <body>
-    <!-- Background Music -->
-    <audio id="background-music" autoplay loop>
-        <source src="One Piece - Opening 6 【Brand New World】 4K 60FPS Creditless  CC.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+  <!-- Background Music -->
+   
+  
+  <audio id="background-music" autoplay loop>
+    <source src="One Piece - Opening 6 【Brand New World】 4K 60FPS Creditless  CC.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-    <div id="game-container">
-        <!-- Game Content -->
-        <div id="game">
-            <h1>Luffy's Tamagotchi</h1>
-            <div class="tamagotchi">
-                <img src="R.png" alt="Luffy" class="character">
+  <div id="game-container">
+    <div id="achievements-container">
+      <h2>Achievements</h2>
+      <ul id="achievements-list">
+        <li id="achievement-feed" class="locked">🍗 Master Feeder: Feed Luffy 5 times.</li>
+        <li id="achievement-sleep" class="locked">💤 Resting Pro: Let Luffy sleep 5 times.</li>
+        <li id="achievement-train" class="locked">💪 Training Champ: Train Luffy 5 times.</li>
+      </ul>
+    </div>
+    <!-- Game Content -->
+    <div id="game">
+      <h1>Luffy's Tamagotchi</h1>
+      <div class="tamagotchi">
+        <img src="R.png" alt="Luffy" class="character">
 
-                <!-- Interactive Message -->
-                <div id="tamagotchi-message" class="message">
-                    <p>I'm feeling great! Let's go on an adventure!</p>
-                </div>
-
-                <!-- Stats Section -->
-                <div class="stat">
-                    <p>Health: <span id="health-percent">100%</span></p>
-                    <progress id="health-bar" value="100" max="100"></progress>
-                </div>
-                <div class="stat">
-                    <p>Hunger: <span id="hunger-percent">100%</span></p>
-                    <progress id="hunger-bar" value="100" max="100"></progress>
-                </div>
-                <div class="stat">
-                    <p>Energy: <span id="energy-percent">100%</span></p>
-                    <progress id="energy-bar" value="100" max="100"></progress>
-                </div>
-            </div>
-
-            <!-- Actions -->
-            <div class="actions">
-                <button onclick="feed()">🍗 Feed Luffy</button>
-                <button onclick="sleep()">💤 Let Luffy Sleep</button>
-                <button onclick="train()">💪 Train Luffy</button>
-            </div>
+        <!-- Interactive Message -->
+        <div id="tamagotchi-message" class="message">
+          <p>I'm feeling great! Let's go on an adventure!</p>
         </div>
 
-        <!-- Game Over Screen -->
-        <div id="game-over-screen" class="hidden">
-            <h2>Game Over</h2>
-            <p>Your Tamagotchi has died. Better luck next time!</p>
-            <button onclick="resetGame()">Try Again</button>
+        <!-- Stats Section -->
+        <div class="stat">
+          <p>Health: <span id="health-percent">100%</span></p>
+          <progress id="health-bar" value="100" max="100"></progress>
         </div>
+        <div class="stat">
+          <p>Hunger: <span id="hunger-percent">100%</span></p>
+          <progress id="hunger-bar" value="100" max="100"></progress>
+        </div>
+        <div class="stat">
+          <p>Energy: <span id="energy-percent">100%</span></p>
+          <progress id="energy-bar" value="100" max="100"></progress>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button onclick="feed()">🍗 Feed Luffy</button>
+        <button onclick="sleep()">💤 Let Luffy Sleep</button>
+        <button onclick="train()">💪 Train Luffy</button>
+      </div>
     </div>
 
-    <script src="tama.js"></script>
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="hidden">
+      <h2>Game Over</h2>
+      <p>Your Tamagotchi has died. Better luck next time!</p>
+      <button onclick="resetGame()">Try Again</button>
+    </div>
+  </div>
+
+  <script src="tama.js"></script>
 </body>
 
 </html>

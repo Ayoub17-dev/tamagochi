@@ -191,3 +191,238 @@ progress::-moz-progress-bar {
         opacity: 1;
     }
 }
+
+#achievements-container {
+    position: absolute;
+    top: 10px;
+    /* Zorg ervoor dat het bovenin begint */
+    left: 10px;
+    z-index: 10;
+    /* Zorg dat het boven andere elementen ligt */
+    width: 250px;
+    /* Beperkt de breedte */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Witte achtergrond met een beetje transparantie */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#achievements-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#achievements-list li {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 1);
+    /* Maak de items goed zichtbaar */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.locked {
+    opacity: 0.5;
+    /* Vergrendelde achievements zijn gedeeltelijk transparant */
+}
+
+.unlocked {
+    background-color: #ffcc00;
+    font-weight: bold;
+}
+
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: cyan;
+    text-align: center;
+}
+
+#welcome-screen h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#welcome-screen p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#welcome-screen button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#welcome-screen button:hover {
+    background-color: #ff5500;
+}
+
+/* Start Button Styling */
+#start-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #ff9900;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#start-button:hover {
+    background-color: #ff7700;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus Effect (for accessibility) */
+#start-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+/* Active Effect */
+#start-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e90ff, #ff4500);
+    background-size: 400% 400%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    overflow: hidden;
+    animation: gradientBG 10s infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#welcome-screen h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    font-family: 'Verdana', sans-serif;
+    color: #ffd700;
+    animation: fadeIn 2s ease-out, glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ff6347, 0 0 30px #ff4500;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ffd700, 0 0 30px #ff4500, 0 0 40px #ff6347;
+    }
+}
+
+#welcome-screen p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeIn 2s ease-in 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#welcome-screen img {
+    border-radius: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    margin-bottom: 25px;
+    animation: float 3s infinite ease-in-out;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#welcome-screen img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Knop Stijl */
+#welcome-screen .start-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 2s ease-in 1.5s forwards;
+}
+
+#welcome-screen .start-button:hover {
+    background-color: #ff6347;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}

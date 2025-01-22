@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Luffy's Tamagotchi</title>
+    <link rel="stylesheet" href="tama.css">
+</head>
+
+<body>
+    <div id="welcome-screen">
+        <h1>Welcome to Luffy's Tamagotchi</h1>
+        <p>Take care of Luffy and keep him happy!</p>
+        <img src="luffystand.png" alt="luffy" width="450" height="450">
+        <!-- Start Button -->
+        <a href="tama.html" id="start-button">Start Game</a>
+    </div>
+    <script>
+        document.getElementById("start-button").addEventListener("click", function () {
+            window.location.href = "main.html"; // Link naar hoofdspelpagina
+        });
+    </script>
+
+</body>
+
+</html>
